@@ -3,10 +3,13 @@ import {
   faBriefcase,
   faAngleUp,
   faAngleDown,
-  faPlus
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import FormButtons from "./FormButtons";
+import SideEntries from "./SideEntries";
 
-const Experience = ({ isActive, onClick }) => {
+const Experience = ({ isActive, onClick, workDetails, setWorkDetails }) => {
   return (
     <div className="add-experience-section">
       <button className="experience-button section-button" onClick={onClick}>

@@ -4,8 +4,6 @@ import {
   faAngleUp,
   faAngleDown,
   faPlus,
-  faPenToSquare,
-  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import FormButtons from "./FormButtons";
