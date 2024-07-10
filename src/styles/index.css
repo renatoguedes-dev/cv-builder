@@ -131,7 +131,7 @@ input {
   flex-grow: 1;
 }
 
-.education-entry-div {
+.entry-div {
   border-top: 5px solid var(--main-bg-color);
   padding: 0.75rem 1.5rem;
   color: var(--paragraph-entry);
@@ -140,7 +140,7 @@ input {
   align-items: center;
 }
 
-.education-entry-div:nth-last-of-type(2) {
+.entry-div:nth-last-of-type(2) {
   border-bottom: 5px solid var(--main-bg-color);
 }
 

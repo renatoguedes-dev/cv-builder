@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import FormButtons from "./FormButtons";
+import SideEntries from "./SideEntries";
 
 const Education = ({
   isActive,
@@ -114,30 +115,13 @@ const Education = ({
         )}
       </button>
 
-      {isActive &&
-        !addEducation &&
-        educationDetails.length !== 0 &&
-        educationDetails.map((entry) => (
-          <div className="education-entry-div" key={entry.id}>
-            <p className="side-entry-paragraph">{entry.university}</p>
-            <div className="edit-delete-icons-div">
-              <button
-                className="edit-icon"
-                onClick={() => handleEdit(entry.id)}
-              >
-                <FontAwesomeIcon icon={faPenToSquare} />
-              </button>
-              <div className="edit-hover">Edit</div>
-              <button
-                className="delete-icon"
-                onClick={() => handleDelete(entry.id)}
-              >
-                <FontAwesomeIcon icon={faTrash} />
-              </button>
-              <div className="delete-hover">Delete</div>
-            </div>
-          </div>
-        ))}
+      {isActive && !addEducation && educationDetails.length !== 0 && (
+        <SideEntries
+          entries={educationDetails}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}
+        />
+      )}
 
       {/* show the add education button if the section is active */}
       {isActive && !addEducation && (

@@ -6,7 +6,7 @@ const SideEntries = ({ entries, handleEdit, handleDelete }) => {
   return (
     <>
       {entries.map((entry) => (
-        <div className="education-entry-div" key={entry.id}>
+        <div className="entry-div" key={entry.id}>
           <p className="side-entry-paragraph">{entry.university}</p>
           <div className="edit-delete-icons-div">
             <button className="edit-icon" onClick={() => handleEdit(entry.id)}>
