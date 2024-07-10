@@ -34,6 +34,18 @@ const Education = ({
     }));
   };
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setAddEducation(false);
+    setEducationForm({
+      university: "",
+      degree: "",
+      startDate: "",
+      endDate: "",
+      location: "",
+    });
+  };
+
   const handleSave = (e) => {
     e.preventDefault();
     if (editID === null) {
@@ -113,6 +125,7 @@ const Education = ({
         )}
       </button>
 
+      {/* show the education entries in case there are any */}
       {isActive && !addEducation && educationDetails.length !== 0 && (
         <SideEntries
           entries={educationDetails}
@@ -162,7 +175,7 @@ const Education = ({
                 placeholder="Enter Degree / Field of Study"
               />
             </div>
-            <div className="education-dates-div">
+            <div className="dates-div">
               <div className="input-group">
                 <label htmlFor="startDate">
                   <span>Start Date</span>
@@ -190,7 +203,7 @@ const Education = ({
             </div>
             <div className="input-group">
               <label htmlFor="location">
-                <span>location</span>
+                <span>Location</span>
                 <span className="recommended-text">optional</span>
               </label>
               <input
@@ -203,7 +216,7 @@ const Education = ({
             </div>
 
             <FormButtons
-              closeSection={setAddEducation}
+              cancelSection={handleCancel}
               saveSection={handleSave}
             />
           </div>

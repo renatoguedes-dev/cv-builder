@@ -13,6 +13,8 @@ const ContentEdition = ({
   setPersonalDetails,
   educationDetails,
   setEducationDetails,
+  workDetails,
+  setWorkDetails,
 }) => {
   // State to track the currently active section
   const [activeSection, setActiveSection] = useState("personal-details");
@@ -49,6 +51,8 @@ const ContentEdition = ({
       <Experience
         isActive={activeSection === "experience"}
         onClick={() => handleExpand("experience")}
+        workDetails={workDetails}
+        setWorkDetails={setWorkDetails}
       />
     </div>
   );

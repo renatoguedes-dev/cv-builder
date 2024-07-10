@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const FormButtons = ({ closeSection, saveSection }) => {
+const FormButtons = ({ cancelSection, saveSection }) => {
   return (
     <div className="form-buttons">
       
       <div className="save-cancel-buttons">
-        <button className="cancel-button" onClick={() => closeSection(false)}>
+        <button className="cancel-button" onClick={cancelSection}>
           Cancel
         </button>
         <button className="save-button" onClick={saveSection}>

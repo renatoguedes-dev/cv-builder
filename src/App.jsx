@@ -12,6 +12,7 @@ function App() {
   });
 
   const [educationDetails, setEducationDetails] = useState([]);
+  const [workDetails, setWorkDetails] = useState([]);
 
   return (
     <div className="app-container">
@@ -20,11 +21,14 @@ function App() {
         setPersonalDetails={setPersonalDetails}
         educationDetails={educationDetails}
         setEducationDetails={setEducationDetails}
+        workDetails={workDetails}
+        setWorkDetails={setWorkDetails}
       />
 
       <ResumePage
         personalDetails={personalDetails}
         educationDetails={educationDetails}
+        workDetails={workDetails}
       />
     </div>
   );

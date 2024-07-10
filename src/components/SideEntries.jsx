@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const SideEntries = ({ entries, handleEdit, handleDelete }) => {
-
   return (
     <>
       {entries.map((entry) => (
         <div className="entry-div" key={entry.id}>
-          <p className="side-entry-paragraph">{entry.university}</p>
+          <p className="side-entry-paragraph">
+            {entry.university || entry.companyName}
+          </p>
           <div className="edit-delete-icons-div">
             <button className="edit-icon" onClick={() => handleEdit(entry.id)}>
               <FontAwesomeIcon icon={faPenToSquare} />
