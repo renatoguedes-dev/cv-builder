@@ -95,7 +95,7 @@ const Experience = ({ isActive, onClick, workDetails, setWorkDetails }) => {
 
   useEffect(() => {
     const handleEnter = (e) => {
-      if (isActive && e.key === "Enter") {
+      if (isActive && e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
         handleSave(e);
       }
     };
@@ -232,7 +232,10 @@ const Experience = ({ isActive, onClick, workDetails, setWorkDetails }) => {
               />
             </div>
 
-            <FormButtons cancelSection={handleCancel} saveSection={handleSave} />
+            <FormButtons
+              cancelSection={handleCancel}
+              saveSection={handleSave}
+            />
           </div>
         </form>
       )}

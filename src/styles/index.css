@@ -97,6 +97,7 @@ input {
   padding: 0.5rem;
   max-width: 100%;
   min-width: 100%;
+  white-space: pre-wrap;
 }
 
 .recommended-text {
@@ -315,28 +316,48 @@ button.save-button:hover {
   width: 10px;
 }
 
-.education-section {
+.header-section {
   text-align: center;
 }
 
-.education-section h2 {
+.header-section h2 {
   background-color: var(--main-bg-color);
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.education-info {
+.general-info {
   display: flex;
   justify-content: space-between;
   gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
   text-align: left;
 }
 
 .university-name {
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .dates-location-info {
+  width: 98px;
   text-align: right;
+}
+
+.company-name {
+  font-weight: bold;
+}
+.company-position-div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.job-info {
+  max-width: 530px;
+}
+
+.job-description-details {
+  white-space: pre-line;
 }

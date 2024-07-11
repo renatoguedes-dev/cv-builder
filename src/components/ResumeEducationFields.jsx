@@ -3,10 +3,10 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 
 const ResumeEducationFields = ({ educationDetails }) => {
   return (
-    <div className="education-section">
+    <div className="header-section">
       {educationDetails.length !== 0 && <h2>Education</h2>}
       {educationDetails.map((education) => (
-        <div key={education.id} className="education-info">
+        <div key={education.id} className="general-info">
           <div className="graduation-info">
             <div className="university-name">{education.university}</div>
             <div className="degree-details">{education.degree}</div>
